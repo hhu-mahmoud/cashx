@@ -1,6 +1,6 @@
 <?= $this->extend('layouts/layout_dashboard') ?>
 <?= $this->section('content') ?>
-
+<?php $session = session(); ?>
 <div class="row">
     <div class="col-md-6">
         <!-- Profile Form -->
@@ -13,15 +13,21 @@
             </div>
         </div>
         <div class="row mb-3">
+            <label for="firstname" class="col-md-3 col-form-label">Username</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="username" name="username" value="<?= $session->get('username')?>" disabled>
+            </div>
+        </div>
+        <div class="row mb-3">
             <label for="firstname" class="col-md-3 col-form-label">First Name</label>
             <div class="col-md-9">
-                <input type="text" class="form-control" id="firstname" name="firstname" value="John">
+                <input type="text" class="form-control" id="firstname" name="firstname" value="<?= $session->get('firstname')?>">
             </div>
         </div>
         <div class="row mb-3">
             <label for="lastname" class="col-md-3 col-form-label">Last Name</label>
             <div class="col-md-9">
-                <input type="text" class="form-control" id="lastname" name="lastname" value="Doe">
+                <input type="text" class="form-control" id="lastname" name="lastname" value="<?= $session->get('lastname')?>">
             </div>
         </div>
         <div class="row mb-3">

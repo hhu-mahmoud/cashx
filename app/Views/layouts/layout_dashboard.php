@@ -1,4 +1,5 @@
 <?= $this->include('partials/head') ?>
+<?php $session = session(); ?>
 <!-- HEADER: MENU -->
 <header>
 
@@ -36,7 +37,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="<?= base_url('assets/images/user_avatar.png'); ?>" alt="User Avatar" class="user-avatar">
-                            John Doe
+                            <?php
+                            if ($session->has('username')) {
+                                echo $session->get('firstname'). " " . $session->get('lastname');
+                            }
+                            ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="profile">Profile</a></li>

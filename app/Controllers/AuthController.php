@@ -159,6 +159,8 @@ class AuthController extends BaseController
                     session()->set([
                         'user_id'    => $user['id'],
                         'username'   => $user['username'],
+                        'firstname'   => $user['firstname'],
+                        'lastname'   => $user['lastname'],
                         'isLoggedIn' => true
                     ]);
 
@@ -169,7 +171,9 @@ class AuthController extends BaseController
                     if ($this->request->getVar('remember')) {
                         $cookieValue = json_encode([
                             'user_id'  => $user['id'],
-                            'username' => $user['username']
+                            'username' => $user['username'],
+                            'firstname'   => $user['firstname'],
+                            'lastname'   => $user['lastname']
                         ]);
                         $encryptedValue = service('encryption')->encrypt($cookieValue);
                         set_cookie('remember_me', $encryptedValue, 30 * 24 * 60 * 60, '', '', true, true);

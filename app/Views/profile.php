@@ -13,32 +13,32 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="firstname" class="col-md-3 col-form-label">Username</label>
+            <label for="firstname" class="col-md-3 col-form-label"><span><?=lang('User.username')?></span></label>
             <div class="col-md-9">
                 <input type="text" class="form-control" id="username" name="username" value="<?= $session->get('username')?>" disabled>
             </div>
         </div>
         <div class="row mb-3">
-            <label for="firstname" class="col-md-3 col-form-label">First Name</label>
+            <label for="firstname" class="col-md-3 col-form-label"><span><?=lang('User.firstname')?></span></label>
             <div class="col-md-9">
                 <input type="text" class="form-control" id="firstname" name="firstname" value="<?= $session->get('firstname')?>">
             </div>
         </div>
         <div class="row mb-3">
-            <label for="lastname" class="col-md-3 col-form-label">Last Name</label>
+            <label for="lastname" class="col-md-3 col-form-label"><span><?=lang('User.lastname')?></span></label>
             <div class="col-md-9">
                 <input type="text" class="form-control" id="lastname" name="lastname" value="<?= $session->get('lastname')?>">
             </div>
         </div>
         <div class="row mb-3">
-            <label for="password" class="col-md-3 col-form-label">New Password</label>
+            <label for="password" class="col-md-3 col-form-label"><span><?=lang('Auth.password')?></span></label>
             <div class="col-md-9">
                 <input type="password" class="form-control" id="password" name="password"
                        placeholder="Enter new password">
             </div>
         </div>
         <div class="row mb-3">
-            <label for="confirm-password" class="col-md-3 col-form-label">Confirm Password</label>
+            <label for="confirm-password" class="col-md-3 col-form-label"><span><?=lang('Auth.confirmPassword')?></span></label>
             <div class="col-md-9">
                 <input type="password" class="form-control" id="confirm-password" name="confirm-password"
                        placeholder="Confirm new password">
@@ -46,7 +46,7 @@
         </div>
         <div class="d-flex justify-content-end">
             <button type="submit" class="btn btn-success me-2" id="save-button">
-                <i class="fas fa-save me-1"></i>Save Changes
+                <span><?=lang('App.save')?></span>
             </button>
         </div>
         <?= form_close() ?>

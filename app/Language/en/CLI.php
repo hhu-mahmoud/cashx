@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * This file is part of CodeIgniter 4 framework.
+ *
+ * (c) CodeIgniter Foundation <admin@codeigniter.com>
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
+
+// CLI language settings
+return [
+    'altCommandPlural'   => 'Did you mean one of these commands?',
+    'altCommandSingular' => 'Did you mean this command?',
+    'commandNotFound'    => 'Command "{0}" not found.',
+    'generator'          => [
+        'cancelOperation' => 'Operation has been canceled.',
+        'className'       => [
+            'cell'       => 'Cell class name',
+            'command'    => 'Command class name',
+            'config'     => 'Configuration class name',
+            'controller' => 'Controller class name',
+            'default'    => 'Default class name',
+            'entity'     => 'Entity class name',
+            'filter'     => 'Filter class name',
+            'migration'  => 'Migration class name',
+            'model'      => 'Model class name',
+            'seeder'     => 'Seeder class name',
+            'test'       => 'Test class name',
+            'validation' => 'Validation class name',
+        ],
+        'commandType'      => 'Command type',
+        'databaseGroup'    => 'Database group',
+        'fileCreate'       => 'File created: {0}',
+        'fileError'        => 'Error creating file: {0}',
+        'fileExist'        => 'File already exists: {0}',
+        'fileOverwrite'    => 'File overwritten: {0}',
+        'parentClass'      => 'Parent class',
+        'returnType'       => 'Return type',
+        'tableName'        => 'Table name',
+        'usingCINamespace' => 'Warning: Using the "CodeIgniter" namespace will create the file in the system folder.',
+        'viewName'         => [
+            'cell' => 'Cell view name',
+        ],
+    ],
+    'helpArguments'       => 'Arguments:',
+    'helpDescription'     => 'Description:',
+    'helpOptions'         => 'Options:',
+    'helpUsage'           => 'Usage:',
+    'invalidColor'        => 'Invalid {0} color: {1}.',
+    'namespaceNotDefined' => 'The namespace "{0}" is not defined.',
+
+];

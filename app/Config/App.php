@@ -96,6 +96,19 @@ class App extends BaseConfig
      */
     public string $defaultLocale = 'en';
 
+    public function setLocale()
+    {
+        // Check if a language is set in the session
+        $lang = session()->get('lang');
+        if ($lang && in_array($lang, $this->supportedLocales)) {
+            // Set the locale based on the session value
+            return $lang;
+        }
+
+        // Return the default locale if no session language is set
+        return $this->defaultLocale;
+    }
+
     /**
      * --------------------------------------------------------------------------
      * Negotiate Locale
@@ -121,7 +134,7 @@ class App extends BaseConfig
      *
      * @var list<string>
      */
-    public array $supportedLocales = ['en'];
+    public array $supportedLocales = ['en', 'ar', 'de'];
 
     /**
      * --------------------------------------------------------------------------
@@ -200,4 +213,7 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+
+    public $sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler';  // or 'CodeIgniter\Session\Handlers\DatabaseHandler' for DB sessions
+
 }

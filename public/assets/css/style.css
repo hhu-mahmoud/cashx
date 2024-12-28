@@ -12,7 +12,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 95vh;
     padding: 20px;
 }
 
@@ -95,6 +95,8 @@ form button:hover {
     position: fixed;
     margin-left: 120px;
     width: -webkit-fill-available;
+    z-index: 1000;
+    background-color: #343a40;
 }
 
 .card {

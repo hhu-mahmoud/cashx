@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Green Stripe (top) -->
+  <path fill="#007a3d" d="M0 0h512v170.7H0Z"/>
+  
+  <!-- White Stripe -->
+  <path fill="#fff" d="M0 170.7h512v170.7H0Z"/>
+  
+  <!-- Black Stripe -->
+  <path fill="#000" d="M0 341.4h512v170.7H0Z"/>
+  
+  <!-- Red Stars -->
+  
+  <!-- First Star (Left) -->
+  <path fill="#ce1126" d="M36.4 320 88 192l41.6 128-108.9-79.1h134.6"/>
+  
+  <!-- Second Star (Middle) -->
+  <path fill="#ce1126" d="M214 320 257 192l41.6 128-108.9-79.1h134.6"/>
+  
+  <!-- Third Star (Right) -->
+  <path fill="#ce1126" d="M381 320 423 192l41.6 128-108.9-79.1h134.6"/>
+</svg>
+

@@ -7,11 +7,11 @@
 <section id="sidebar">
 <!-- Sidebar -->
 <div class="sidebar" id="sidebar">
-    <h2 class="text-white text-center">CashX</h2>
-    <a href="home"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-    <a href="profile"><i class="fas fa-user me-2"></i>Profile</a>
-    <a href="settings"><i class="fas fa-cogs me-2"></i>Settings</a>
-    <a href="logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+    <h2 class="text-white text-center"><span><?=lang('App.appName')?></span></h2>
+    <a href="home"><i class="fas fa-tachometer-alt me-2"></i><span><?=lang('App.dashboard')?></span></a>
+    <a href="profile"><i class="fas fa-user me-2"></i><span><?=lang('App.profile')?></span></a>
+    <a href="settings"><i class="fas fa-cogs me-2"></i><span><?=lang('App.settings')?></span></a>
+    <a href="logout"><i class="fas fa-sign-out-alt me-2"></i><span><?=lang('Auth.logout')?></span></a>
     <!-- Toggle Button -->
 
 </div>
@@ -20,18 +20,18 @@
 <!-- Main Content -->
 <div class="main-content" id="main-content">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-bell"></i> Notifications</a>
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i> <span><?=lang('App.notifications')?></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Messages</a>
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> <span><?=lang('App.messages')?></span></a>
                     </li>
                     <!-- User Avatar and Dropdown -->
                     <li class="nav-item dropdown">
@@ -44,10 +44,27 @@
                             ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="profile">Profile</a></li>
-                            <li><a class="dropdown-item" href="settings">Settings</a></li>
-                            <li><a class="dropdown-item" href="logout">Logout</a></li>
+                            <li><a class="dropdown-item" href="profile"><span><?=lang('App.profile')?></span></a></li>
+                            <li><a class="dropdown-item" href="settings"><span><?=lang('App.settings')?></span></a></li>
+                            <li><a class="dropdown-item" href="logout"><span><?=lang('Auth.logout')?></span></a></li>
                         </ul>
+
+                    </li>
+                    <!-- User Avatar and Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="switch-language/en"><img src="<?= base_url('assets/flags/us.svg');?>" alt="US Flag" width="23" height="15" /> English</a>
+                            </li>
+                            <li><a class="dropdown-item" href="switch-language/de"> <img src="<?= base_url('assets/flags/de.svg');?>" alt="US Flag" width="23" height="15" />
+                                    Deutsch</a></li>
+                            <li><a class="dropdown-item" href="switch-language/ar"> <img src="<?= base_url('assets/flags/sy.svg');?>" alt="US Flag" width="23" height="15" />
+                                    عربي</a></li>
+                        </ul>
+
                     </li>
                 </ul>
             </div>
@@ -68,7 +85,7 @@
 <section id="footer">
 <!-- Footer -->
 <div class="footer">
-    <a href="https://www.heyit.org/">Copyright &copy; <?= date('Y') ?> Heyit</a>
+    <a href="https://www.heyit.org/"><?=lang('App.copyright',[date('Y')])?> Heyit</a>
 </div>
 </section>
 <?= $this->include('partials/foot') ?>

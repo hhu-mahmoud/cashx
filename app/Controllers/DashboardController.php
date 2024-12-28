@@ -8,11 +8,6 @@ class DashboardController extends BaseController
 {
     public function __construct()
     {
-        // starte the session
-        $this->session = session();
-        if (!session()->get('isLoggedIn')) {
-            return redirect()->to('/login');
-        }
         helper([
             'form',
             'url'
@@ -20,10 +15,19 @@ class DashboardController extends BaseController
     }
     public function home()
     {
+        // starte the session
+        $this->session = session();
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/login');
+        }
         return view('home');
     }
     public function profile()
     {
+        $this->session = session();
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/login');
+        }
         return view('profile');
     }
 }

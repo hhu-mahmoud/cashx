@@ -12,8 +12,7 @@ $routes->group('/', ['namespace' => 'App\Controllers'], function($routes) {
     $routes->get('login', 'AuthController::login');
     $routes->post('login', 'AuthController::login');
     $routes->get('logout', 'AuthController::logout');
-    $routes->post('dashboard', 'DashboardController::index');
-    $routes->get('home', 'DashboardController::home');
+    $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->get('profile', 'DashboardController::profile');
     $routes->post('update-profile', 'ProfileController::updateProfile');
 });

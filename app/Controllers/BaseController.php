@@ -62,7 +62,7 @@ abstract class BaseController extends Controller
     {
         $session = session();
         if (!$session->get('isLoggedIn')) {
-            return redirect()->to('/login')->with('error', 'Please log in first.');
+            return redirect()->to(site_url())->with('error', 'Please log in first.');
         }
     }
 

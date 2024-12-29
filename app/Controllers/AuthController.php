@@ -43,7 +43,7 @@ class AuthController extends BaseController
         $user = $model->where('password_reset_token', $token)->where('password_reset_expires >=', date('Y-m-d H:i:s'))->first();
 
         if (!$user) {
-            return redirect()->to('/login')->with('error', 'Invalid or expired token.');
+            return redirect()->to(site_url())->with('error', 'Invalid or expired token.');
         }
 
         if ($this->request->getMethod() === 'POST') {
@@ -69,7 +69,7 @@ class AuthController extends BaseController
                 // Clear expiration
             ]);
 
-            return redirect()->to('/login')->with('success', 'Your password has been reset.');
+            return redirect()->to(site_url())->with('success', 'Your password has been reset.');
         }
 
         return view('auth/reset_password', ['token' => $token]);
@@ -130,7 +130,7 @@ class AuthController extends BaseController
             // Send the email with password reset link
             $this->sendPasswordResetEmail($this->request->getVar('email'), $token);
 
-            return redirect()->to('/login')->with('success', 'Registration successful! Please check your email to set your password.');
+            return redirect()->to(site_url())->with('success', 'Registration successful! Please check your email to set your password.');
         }
 
         return view('auth/register');
@@ -142,7 +142,9 @@ class AuthController extends BaseController
             'form',
             'cookie'
         ]); // Load cookie helper
-
+        if (session()->get('isLoggedIn')) {
+            return redirect()->to('/dashboard');
+        }
         if ($this->request->getMethod() === 'POST') {
             $rules = [
                 'email'    => 'required|valid_email',
@@ -186,7 +188,7 @@ class AuthController extends BaseController
                         delete_cookie('remember_me');
                     }
 
-                    return redirect()->to('/home');
+                    return redirect()->to('/dashboard');
                 }
             }
 
@@ -201,6 +203,6 @@ class AuthController extends BaseController
         helper('cookie');
         session()->destroy();
         delete_cookie('remember_me');
-        return redirect()->to('/');
+        return redirect()->to(site_url());
     }
 }

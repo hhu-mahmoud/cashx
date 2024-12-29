@@ -13,20 +13,20 @@ class DashboardController extends BaseController
             'url'
         ]);
     }
-    public function home()
+    public function dashboard()
     {
         // starte the session
         $this->session = session();
         if (!session()->get('isLoggedIn')) {
-            return redirect()->to('/login');
+            return redirect()->to(site_url());
         }
-        return view('home');
+        return view('dashboard');
     }
     public function profile()
     {
         $this->session = session();
         if (!session()->get('isLoggedIn')) {
-            return redirect()->to('/login');
+            return redirect()->to(site_url());
         }
         return view('profile');
     }

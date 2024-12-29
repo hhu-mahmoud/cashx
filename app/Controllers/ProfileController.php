@@ -15,12 +15,12 @@ class ProfileController extends BaseController
     {
         $session = session();
         if (!session()->get('isLoggedIn')) {
-            return redirect()->to('/login');
+            return redirect()->to('/');
         }
         $userId = $session->get('user_id'); // Retrieve the user ID from the session
 
         if (!$userId) {
-            return redirect()->to('/login')->with('error', 'You must be logged in to update your profile.');
+            return redirect()->to('/')->with('error', 'You must be logged in to update your profile.');
         }
         $request = $this->request;
 

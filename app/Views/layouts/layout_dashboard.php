@@ -8,7 +8,7 @@
 <!-- Sidebar -->
 <div class="sidebar" id="sidebar">
     <h2 class="text-white text-center"><span><?=lang('App.appName')?></span></h2>
-    <a href="home"><i class="fas fa-tachometer-alt me-2"></i><span><?=lang('App.dashboard')?></span></a>
+    <a href="dashboard"><i class="fas fa-tachometer-alt me-2"></i><span><?=lang('App.dashboard')?></span></a>
     <a href="profile"><i class="fas fa-user me-2"></i><span><?=lang('App.profile')?></span></a>
     <a href="settings"><i class="fas fa-cogs me-2"></i><span><?=lang('App.settings')?></span></a>
     <a href="logout"><i class="fas fa-sign-out-alt me-2"></i><span><?=lang('Auth.logout')?></span></a>

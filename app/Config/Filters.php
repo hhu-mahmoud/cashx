@@ -3,6 +3,7 @@
 namespace Config;
 
 use App\Filters\SameOriginFilter;
+use App\Filters\ApiKeyFilter;
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -26,7 +27,7 @@ class Filters extends BaseFilters
      * or [filter_name => [classname1, classname2, ...]]
      */
     public array $aliases = [
-				'sameOrigin'    => SameOriginFilter::class,
+        'sameOrigin'    => SameOriginFilter::class,
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
@@ -36,6 +37,7 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'apikey'        => ApiKeyFilter::class, // Register the API Key filter
     ];
 
     /**
@@ -53,13 +55,18 @@ class Filters extends BaseFilters
      */
     public array $required = [
         'before' => [
-            'forcehttps', // Force Global Secure Requests
-            'pagecache',  // Web Page Caching
+            'forcehttps',
+            // Force Global Secure Requests
+            'pagecache',
+            // Web Page Caching
         ],
-        'after' => [
-            'pagecache',   // Web Page Caching
-            'performance', // Performance Metrics
-            'toolbar',     // Debug Toolbar
+        'after'  => [
+            'pagecache',
+            // Web Page Caching
+            'performance',
+            // Performance Metrics
+            'toolbar',
+            // Debug Toolbar
         ],
     ];
 
@@ -72,11 +79,11 @@ class Filters extends BaseFilters
     public array $globals = [
         'before' => [
             // 'honeypot',
-             'csrf',
+            'csrf',
             // 'invalidchars',
-							'sameOrigin',
+            'sameOrigin',
         ],
-        'after' => [
+        'after'  => [
             // 'honeypot',
             // 'secureheaders',
         ],

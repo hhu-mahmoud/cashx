@@ -15,14 +15,17 @@ class AuthController extends BaseController
         // Check if "Remember Me" cookie exists
         $rememberMe = get_cookie('remember_me');
         if ($rememberMe && !session()->get('isLoggedIn')) {
-            $data = json_decode(base64_decode($rememberMe), true);
+            $encrypter = service('encrypter');
+            $ciphertext = $encrypter->decrypt($rememberMe);
+            $data = json_decode($ciphertext, true);
             if ($data) {
                 session()->set([
                     'user_id'    => $data['user_id'],
                     'username'   => $data['username'],
+                    'lang'=> $data['lang'],
                     'isLoggedIn' => true
                 ]);
-
+                service('request')->setLocale($data['lang']);
                 // Regenerate session ID after automatic login
                 session()->regenerate();
             }
@@ -173,10 +176,12 @@ class AuthController extends BaseController
                             'user_id'  => $user['id'],
                             'username' => $user['username'],
                             'firstname'   => $user['firstname'],
-                            'lastname'   => $user['lastname']
+                            'lastname'   => $user['lastname'],
+                            'lang' => session()->get('lang') ?? config('App')->defaultLocale,
                         ]);
-                        $encryptedValue = service('encryption')->encrypt($cookieValue);
-                        set_cookie('remember_me', $encryptedValue, 30 * 24 * 60 * 60, '', '', true, true);
+                        $encrypter = service('encrypter');
+                        $ciphertext = $encrypter->encrypt($cookieValue);
+                        set_cookie('remember_me', $ciphertext, 30 * 24 * 60 * 60, '', '', true, true);
                     } else {
                         delete_cookie('remember_me');
                     }

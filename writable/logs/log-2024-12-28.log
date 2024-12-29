@@ -729,3 +729,294 @@ WARNING - 2024-12-28 11:16:34 --> [DEPRECATED] Creation of dynamic property App\
  4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:11 --> CSRF token verified.
+INFO - 2024-12-28 11:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:23:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:23:26 --> CSRF token verified.
+INFO - 2024-12-28 11:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:23:26 --> Error: Call to a member function encrypt() on null
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 179.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:25:24 --> CSRF token verified.
+INFO - 2024-12-28 11:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:25:57 --> CSRF token verified.
+INFO - 2024-12-28 11:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:25:58 --> Error: Call to a member function encrypt() on null
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 179.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:26:34 --> CSRF token verified.
+INFO - 2024-12-28 11:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:26:34 --> Error: Call to a member function encrypt() on null
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 179.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:27:23 --> CSRF token verified.
+INFO - 2024-12-28 11:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:27:23 --> Error: Call to a member function encrypt() on null
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 178.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:27:32 --> CSRF token verified.
+INFO - 2024-12-28 11:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:27:32 --> Error: Call to a member function encrypt() on null
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 178.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:28:13 --> CSRF token verified.
+INFO - 2024-12-28 11:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:28:37 --> CSRF token verified.
+INFO - 2024-12-28 11:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:28:53 --> CSRF token verified.
+INFO - 2024-12-28 11:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:28:53 --> Error: Call to a member function encrypt() on null
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 180.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:31:14 --> CSRF token verified.
+INFO - 2024-12-28 11:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:31:14 --> Error: Call to a member function encrypt() on null
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 180.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:32:56 --> CSRF token verified.
+INFO - 2024-12-28 11:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-28 11:32:56 --> CodeIgniter\Encryption\Exceptions\EncryptionException: يحتاج المشفر إلى مفتاح بادئ.
+[Method: POST, Route: login]
+in SYSTEMPATH\Encryption\Encryption.php on line 128.
+ 1 SYSTEMPATH\Encryption\Encryption.php(128): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH\Config\Services.php(256): CodeIgniter\Encryption\Encryption->initialize(Object(Config\Encryption))
+ 3 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::encrypter()
+ 4 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('encrypter', [])
+ 5 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('encrypter')
+ 6 APPPATH\Controllers\AuthController.php(179): service('encrypter')
+ 7 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:36:48 --> CSRF token verified.
+INFO - 2024-12-28 11:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:38:19 --> CSRF token verified.
+INFO - 2024-12-28 11:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:38:24 --> CSRF token verified.
+INFO - 2024-12-28 11:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:42:40 --> CSRF token verified.
+INFO - 2024-12-28 11:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:42:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:43:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:43:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:43:43 --> CSRF token verified.
+INFO - 2024-12-28 11:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:43:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:43:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:43:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:44:01 --> CSRF token verified.
+INFO - 2024-12-28 11:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:44:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:45:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:45:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 11:45:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 11:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 11:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 19:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 19:34:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->profile()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 19:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 19:34:33 --> CSRF token verified.
+INFO - 2024-12-28 19:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 19:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 19:34:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 19:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-28 19:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 19:34:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 19:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 19:34:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->profile()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-28 19:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-28 19:34:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->home()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-28 20:50:55 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\cashx-development\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\cashx-development\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\xampp\htdocs\cashx-development\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\xampp\htdocs\cashx-development\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\xampp\htdocs\cashx-development\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\xampp\htdocs\cashx-development\app\Database\Migrations\2024-12-28-204932_CreateApiKeysTable.php(52): CodeIgniter\Database\Forge->createTable('api_keys', true)
+#5 C:\xampp\htdocs\cashx-development\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateApiKeysTable->up()
+#6 C:\xampp\htdocs\cashx-development\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\cashx-development\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\cashx-development\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\cashx-development\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\cashx-development\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\cashx-development\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\cashx-development\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}

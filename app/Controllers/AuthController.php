@@ -201,6 +201,6 @@ class AuthController extends BaseController
         helper('cookie');
         session()->destroy();
         delete_cookie('remember_me');
-        return redirect()->to('/login');
+        return redirect()->to('/');
     }
 }

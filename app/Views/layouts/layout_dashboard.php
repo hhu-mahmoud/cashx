@@ -9,9 +9,6 @@
 <div class="sidebar" id="sidebar">
     <h2 class="text-white text-center"><span><?=lang('App.appName')?></span></h2>
     <a href="dashboard"><i class="fas fa-tachometer-alt me-2"></i><span><?=lang('App.dashboard')?></span></a>
-    <a href="profile"><i class="fas fa-user me-2"></i><span><?=lang('App.profile')?></span></a>
-    <a href="settings"><i class="fas fa-cogs me-2"></i><span><?=lang('App.settings')?></span></a>
-    <a href="logout"><i class="fas fa-sign-out-alt me-2"></i><span><?=lang('Auth.logout')?></span></a>
     <!-- Toggle Button -->
 
 </div>
@@ -27,12 +24,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-bell"></i> <span><?=lang('App.notifications')?></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> <span><?=lang('App.messages')?></span></a>
-                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#"><i class="fas fa-bell"></i> <span>--><?php //=lang('App.notifications')?><!--</span></a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> <span>--><?php //=lang('App.messages')?><!--</span></a>-->
+<!--                    </li>-->
                     <!-- User Avatar and Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,9 +41,9 @@
                             ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="profile"><span><?=lang('App.profile')?></span></a></li>
-                            <li><a class="dropdown-item" href="settings"><span><?=lang('App.settings')?></span></a></li>
-                            <li><a class="dropdown-item" href="logout"><span><?=lang('Auth.logout')?></span></a></li>
+                            <li><a class="dropdown-item" href="profile"><i class="fas fa-user me-2"></i><span><?=lang('App.profile')?></span></a></li>
+                            <li><a class="dropdown-item" href="settings"><i class="fas fa-cogs me-2"></i><span><?=lang('App.settings')?></span></a></li>
+                            <li><a class="dropdown-item" href="logout"><i class="fas fa-sign-out-alt me-2"></i><span><?=lang('Auth.logout')?></span></a></li>
                         </ul>
 
                     </li>

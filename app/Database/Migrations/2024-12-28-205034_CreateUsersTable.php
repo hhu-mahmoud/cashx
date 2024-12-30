@@ -11,21 +11,22 @@ class CreateUsersTable extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id'       => ['type' => 'INT', 'auto_increment' => true],
-            'firstname'     => ['type' => 'VARCHAR', 'constraint' => 50],
-            'lastname'     => ['type' => 'VARCHAR', 'constraint' => 50],
-            'username'     => ['type' => 'VARCHAR', 'constraint' => 100],
-            'email'    => ['type' => 'VARCHAR', 'constraint' => 255],
-            'password_hash' => ['type' => 'VARCHAR', 'constraint' => 255],
-            'password_reset_token' => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
+            'Id'       => ['type' => 'INT', 'auto_increment' => true],
+            'Firstname'     => ['type' => 'VARCHAR', 'constraint' => 50],
+            'Lastname'     => ['type' => 'VARCHAR', 'constraint' => 50],
+            'Username'     => ['type' => 'VARCHAR', 'constraint' => 100],
+            'Email'    => ['type' => 'VARCHAR', 'constraint' => 255],
+            'Password_hash' => ['type' => 'VARCHAR', 'constraint' => 255],
+            'Password_reset_token' => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
             'password_reset_expires' => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
+            'Role'    => ['type' => 'VARCHAR', 'constraint' => 50],
             'created_at datetime default current_timestamp',
             'updated_at datetime default current_timestamp on update current_timestamp',
         ]);
-        $this->forge->addKey('id', true);
-        $this->forge->addKey('username', false,true);
-        $this->forge->addKey('email', false,true);
-        $this->forge->createTable('users',true);
+        $this->forge->addKey('Id', true);
+        $this->forge->addKey('Username', false,true);
+        $this->forge->addKey('Email', false,true);
+        $this->forge->createTable('Users',true);
     }
 
     /**

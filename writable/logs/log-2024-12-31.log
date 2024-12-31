@@ -395,3 +395,67 @@ Stack trace:
 #12 C:\xampp\htdocs\cashx-development\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #13 C:\xampp\htdocs\cashx-development\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #14 {main}
+INFO - 2024-12-31 10:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-31 10:37:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-31 10:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-31 10:37:30 --> CSRF token verified.
+INFO - 2024-12-31 10:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-31 10:37:30 --> ErrorException: Undefined array key "password_hash"
+[Method: POST, Route: login]
+in APPPATH\Controllers\AuthController.php on line 163.
+ 1 APPPATH\Controllers\AuthController.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password_hash"', 'C:\\xampp\\htdocs\\cashx-development\\app\\Controllers\\AuthController.php', 163)
+ 2 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-31 10:37:55 --> CSRF token verified.
+INFO - 2024-12-31 10:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-31 10:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-31 10:37:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-31 10:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-31 10:37:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->profile()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-31 10:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-31 10:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-31 10:38:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->profile()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-31 10:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-31 10:38:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-31 10:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-31 10:38:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\DashboardController::$session is deprecated in APPPATH\Controllers\DashboardController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(935): App\Controllers\DashboardController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(357): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

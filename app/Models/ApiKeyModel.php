@@ -6,30 +6,30 @@ use CodeIgniter\Model;
 
 class ApiKeyModel extends Model
 {
-    protected $table = 'api_keys'; // Table name
-    protected $primaryKey = 'id'; // Primary key
+    protected $table = 'ApiKeys'; // Table name
+    protected $primaryKey = 'ApiKeyID'; // Primary key
 
     // Define the fields that can be inserted or updated
     protected $allowedFields = [
-        'api_key',
-        'status',
-        'allowed_models',
-        'allowed_methods',
-        'allowed_ips',
-        'expires_at',
-        'created_at',
-        'updated_at'
+        'ApiKey',
+        'Status',
+        'AllowedModels',
+        'AllowedMethods',
+        'AllowedIPs',
+        'ExpiresAt',
+        'CreatedAt',
+        'UpdatedAt'
     ];
 
     // Automatically handle timestamps
     protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
+    protected $createdField  = 'CreatedAt';
+    protected $updatedField  = 'UpdatedAt';
 
     // Retrieve an API key by its value
     public function getKey($key)
     {
-        return $this->where('api_key', $key)->first();
+        return $this->where('ApiKey', $key)->first();
     }
 
     // Check if a given API key is valid
@@ -43,8 +43,8 @@ class ApiKeyModel extends Model
 
         // Check status and expiration
         if (
-            $apiKey['status'] == 0 ||
-            (!empty($apiKey['expires_at']) && strtotime($apiKey['expires_at']) < time())
+            $apiKey['Status'] == 0 ||
+            (!empty($apiKey['ExpiresAt']) && strtotime($apiKey['ExpiresAt']) < time())
         ) {
             return false;
         }
@@ -55,9 +55,9 @@ class ApiKeyModel extends Model
     // Generate a new API key
     public function generateKey($data)
     {
-        $data['api_key'] = bin2hex(random_bytes(16)); // Generate a random API key
-        $data['created_at'] = date('Y-m-d H:i:s');
-        $data['updated_at'] = date('Y-m-d H:i:s');
+        $data['ApiKey'] = bin2hex(random_bytes(16)); // Generate a random API key
+        $data['CreatedAt'] = date('Y-m-d H:i:s');
+        $data['UpdatedAt'] = date('Y-m-d H:i:s');
         return $this->insert($data);
     }
 }

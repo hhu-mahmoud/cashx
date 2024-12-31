@@ -20,8 +20,8 @@ class AuthController extends BaseController
             $data = json_decode($ciphertext, true);
             if ($data) {
                 session()->set([
-                    'user_id'    => $data['user_id'],
-                    'username'   => $data['username'],
+                    'user_id'    => $data['UserID'],
+                    'username'   => $data['Username'],
                     'lang'=> $data['lang'],
                     'isLoggedIn' => true
                 ]);
@@ -61,8 +61,8 @@ class AuthController extends BaseController
 
             // Update the user's password
             $passwordHash = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
-            $model->update($user['id'], [
-                'password_hash'          => $passwordHash,
+            $model->update($user['UserID'], [
+                'Password_hash'          => $passwordHash,
                 'password_reset_token'   => null,
                 // Clear the token after use
                 'password_reset_expires' => null
@@ -119,10 +119,10 @@ class AuthController extends BaseController
 
             // Save user without password and send email with reset link
             $model->save([
-                'firstname'              => $this->request->getVar('firstname'),
-                'lastname'               => $this->request->getVar('lastname'),
-                'username'               => $this->request->getVar('username'),
-                'email'                  => $this->request->getVar('email'),
+                'Firstname'              => $this->request->getVar('firstname'),
+                'Lastname'               => $this->request->getVar('lastname'),
+                'Username'               => $this->request->getVar('username'),
+                'Email'                  => $this->request->getVar('email'),
                 'password_reset_token'   => $token,
                 'password_reset_expires' => $expireTime
             ]);
@@ -156,16 +156,16 @@ class AuthController extends BaseController
             }
 
             $model = new UserModel();
-            $user = $model->where('email', $this->request->getVar('email'))->first();
+            $user = $model->where('Email', $this->request->getVar('email'))->first();
 
             if ($user) {
 
-                if (password_verify($this->request->getVar('password'), $user['password_hash'])) {
+                if (password_verify($this->request->getVar('password'), $user['Password_hash'])) {
                     session()->set([
-                        'user_id'    => $user['id'],
-                        'username'   => $user['username'],
-                        'firstname'   => $user['firstname'],
-                        'lastname'   => $user['lastname'],
+                        'user_id'    => $user['UserID'],
+                        'username'   => $user['Username'],
+                        'firstname'   => $user['Firstname'],
+                        'lastname'   => $user['Lastname'],
                         'isLoggedIn' => true
                     ]);
 
@@ -175,10 +175,10 @@ class AuthController extends BaseController
                     // Handle "Remember Me" checkbox
                     if ($this->request->getVar('remember')) {
                         $cookieValue = json_encode([
-                            'user_id'  => $user['id'],
-                            'username' => $user['username'],
-                            'firstname'   => $user['firstname'],
-                            'lastname'   => $user['lastname'],
+                            'user_id'  => $user['UserID'],
+                            'username' => $user['Username'],
+                            'firstname'   => $user['Firstname'],
+                            'lastname'   => $user['Lastname'],
                             'lang' => session()->get('lang') ?? config('App')->defaultLocale,
                         ]);
                         $encrypter = service('encrypter');

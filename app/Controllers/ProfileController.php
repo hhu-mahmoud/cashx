@@ -38,8 +38,8 @@ class ProfileController extends BaseController
             // Update the user's profile in the database
             $userModel = new \App\Models\UserModel();
             $updateData = [
-                'firstname' => $firstname,
-                'lastname'  => $lastname,
+                'Firstname' => $firstname,
+                'Lastname'  => $lastname,
             ];
 
             // if password should be changed
@@ -55,7 +55,7 @@ class ProfileController extends BaseController
                     return redirect()->back()->with('error', 'Passwords do not match.');
                 }
                 // Update the user's password
-                $updateData['password'] = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
+                $updateData['Password_hash'] = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
             }
 
             if ($userModel->updateUser($userId, $updateData)) {

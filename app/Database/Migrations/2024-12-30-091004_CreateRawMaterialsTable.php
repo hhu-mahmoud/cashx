@@ -33,14 +33,15 @@ class CreateRawMaterialsTable extends Migration
                 'constraint' => 5,
                 'unsigned'   => true,
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('MaterialID', true);
         $this->forge->addForeignKey('UnitTypeID', 'UnitTypes', 'UnitTypeID', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('CurrencyID', 'Currencies', 'CurrencyID', 'CASCADE', 'CASCADE');
         $this->forge->createTable('RawMaterials');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

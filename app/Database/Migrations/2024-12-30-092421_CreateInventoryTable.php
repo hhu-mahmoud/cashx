@@ -26,7 +26,6 @@ class CreateInventoryTable extends Migration
                 'null'       => true,
             ],
             'StorageID' => [
-                'name' => 'StorageID',
                 'type' => 'INT',
                 'constraint' => 5,
                 'unsigned' => true,
@@ -36,14 +35,16 @@ class CreateInventoryTable extends Migration
                 'type'       => 'DECIMAL',
                 'constraint' => '10,2',
             ],
-            'LastUpdated datetime default current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('InventoryID', true);
         $this->forge->addForeignKey('ProductID', 'Products', 'ProductID', 'SET NULL', 'CASCADE');
         $this->forge->addForeignKey('MaterialID', 'RawMaterials', 'MaterialID', 'SET NULL', 'CASCADE');
         $this->forge->addForeignKey('StorageID', 'Storage', 'StorageID', 'CASCADE', 'CASCADE');
         $this->forge->createTable('Inventory');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

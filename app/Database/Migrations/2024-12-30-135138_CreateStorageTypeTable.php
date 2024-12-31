@@ -25,11 +25,13 @@ class CreateStorageTypeTable extends Migration
                 'type'       => 'TEXT',
                 'null'       => true,
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
+        $this->db->disableForeignKeyChecks();
         $this->forge->addPrimaryKey('StorageTypeID');
         $this->forge->createTable('StorageType');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

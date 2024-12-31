@@ -22,12 +22,13 @@ class CreateNotesTable extends Migration
             'NoteContent' => [
                 'type'       => 'TEXT',
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('NoteID', true);
         $this->forge->createTable('Notes');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

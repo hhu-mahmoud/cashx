@@ -16,8 +16,6 @@ class CurrencySeeder extends Seeder
                 'CurrencySymbol'  => '$',
                 'ExchangeRate'    => 1.0000,  // Base currency
                 'Status'           => 'active',
-                'created_at'       => date('Y-m-d H:i:s'),
-                'updated_at'       => date('Y-m-d H:i:s'),
             ],
             [
                 'CurrencyCode'    => 'EUR',
@@ -25,8 +23,6 @@ class CurrencySeeder extends Seeder
                 'CurrencySymbol'  => '€',
                 'ExchangeRate'    => 1.2345,  // Example exchange rate
                 'Status'           => 'active',
-                'created_at'       => date('Y-m-d H:i:s'),
-                'updated_at'       => date('Y-m-d H:i:s'),
             ],
             [
                 'CurrencyCode'    => 'EGP',
@@ -34,12 +30,10 @@ class CurrencySeeder extends Seeder
                 'CurrencySymbol'  => '£',
                 'ExchangeRate'    => 0.032,   // Example exchange rate
                 'Status'           => 'active',
-                'created_at'       => date('Y-m-d H:i:s'),
-                'updated_at'       => date('Y-m-d H:i:s'),
             ],
         ];
 
         // Insert data into the 'currencies' table
-        $this->db->table('currencies')->insertBatch($data);
+        $this->db->table('Currencies')->insertBatch($data);
     }
 }

@@ -33,13 +33,14 @@ class CreateDiscountsTable extends Migration
             'EndDate' => [
                 'type' => 'DATETIME',
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('DiscountID', true);
         $this->forge->addForeignKey('ProductID', 'Products', 'ProductID', 'CASCADE', 'CASCADE');
         $this->forge->createTable('Discounts');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

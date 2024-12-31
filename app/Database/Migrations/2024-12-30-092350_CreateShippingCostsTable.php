@@ -20,11 +20,9 @@ class CreateShippingCostsTable extends Migration
                 'unsigned'   => true,
             ],
             'ShippingMethodID' => [
-                'name' => 'ShippingMethodID',
                 'type' => 'INT',
                 'constraint' => 5,
                 'unsigned' => true,
-                'null' => false,
             ],
             'ShippingCost' => [
                 'type'       => 'DECIMAL',
@@ -39,16 +37,16 @@ class CreateShippingCostsTable extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '40',
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('ShippingCostID', true);
         $this->forge->addForeignKey('ProductID', 'Products', 'ProductID', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('ShippingMethodID', 'ShippingMethods', 'ShippingMethodID', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('CurrencyID', 'Currencies', 'CurrencyID', 'CASCADE', 'CASCADE');
-
         $this->forge->createTable('ShippingCosts');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

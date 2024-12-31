@@ -8,46 +8,48 @@ class CreateApiKeysTable extends Migration
 {
     public function up()
     {
+        $this->db->disableForeignKeyChecks();
         $this->forge->addField([
-            'id' => [
+            'ApiKeyID' => [
                 'type'           => 'INT',
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'api_key' => [
+            'ApiKey' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
             ],
-            'status'      => [
+            'Status'      => [
                 'type'       => 'ENUM',
                 'constraint' => ['active', 'inactive'],
                 'default'    => 'active',
             ],
-            'allowed_models' => [
+            'AllowedModels' => [
                 'type' => 'TEXT', // JSON array of allowed models
                 'null' => true,
             ],
-            'allowed_methods' => [
+            'AllowedMethods' => [
                 'type' => 'TEXT', // JSON array of allowed methods
                 'null' => true,
             ],
-            'allowed_ips' => [
+            'AllowedIPs' => [
                 'type' => 'TEXT', // JSON array of allowed IPs
                 'null' => true,
             ],
-            'expires_at' => [
+            'ExpiresAt' => [
                 'type' => 'DATETIME',
                 'null' => true, // Null means no expiration
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-        $this->forge->addKey('id', true);
-        $this->forge->createTable('api_keys',true);
+        $this->forge->addKey('ApiKeyID', true);
+        $this->forge->createTable('ApiKeys',true);
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()
     {
-        $this->forge->dropTable('api_keys',true,true);
+        $this->forge->dropTable('ApiKeys',true,true);
     }
 }

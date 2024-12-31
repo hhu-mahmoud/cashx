@@ -36,13 +36,14 @@ class CreateOperationsTable extends Migration
                 'type'       => 'DECIMAL',
                 'constraint' => '10,2',
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('OperationID', true);
         $this->forge->addForeignKey('CurrencyID', 'Currencies', 'CurrencyID', 'CASCADE', 'CASCADE');
         $this->forge->createTable('Operations');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

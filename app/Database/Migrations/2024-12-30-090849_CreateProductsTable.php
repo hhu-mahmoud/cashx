@@ -40,14 +40,15 @@ class CreateProductsTable extends Migration
                 'constraint'     => 5,
                 'unsigned'       => true,
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('ProductID', true);
         $this->forge->addForeignKey('CategoryID', 'Categories', 'CategoryID', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('CurrencyID', 'Currencies', 'CurrencyID', 'CASCADE', 'CASCADE');
         $this->forge->createTable('Products');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

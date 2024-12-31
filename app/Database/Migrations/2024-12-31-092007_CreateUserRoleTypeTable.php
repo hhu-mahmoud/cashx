@@ -4,49 +4,40 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateSuppliersTable extends Migration
+class CreateUserRoleTypeTable extends Migration
 {
     public function up()
     {
+        // Create user_role_type table
         $this->forge->addField([
-            'SupplierID' => [
+            'UserRoleTypeID' => [
                 'type'           => 'INT',
-                'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'SupplierName' => [
+            'RoleName' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
+                'null'       => false,
             ],
             'Description' => [
                 'type'       => 'TEXT',
-            ],
-            'Email' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '100',
-            ],
-            'PhoneNumber' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '40',
-            ],
-            'ContactInfo' => [
-                'type'       => 'TEXT',
-            ],
-            'Address' => [
-                'type'       => 'TEXT',
+                'null'       => true,
             ],
             'CreatedAt datetime default current_timestamp',
             'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
         $this->db->disableForeignKeyChecks();
-        $this->forge->addKey('SupplierID', true);
-        $this->forge->createTable('Suppliers');
+        // Add primary key and other constraints
+        $this->forge->addKey('UserRoleTypeID', true);
+        // Create the table
+        $this->forge->createTable('UserRoleType');
         $this->db->enableForeignKeyChecks();
     }
 
     public function down()
     {
-        $this->forge->dropTable('Suppliers');
+        // Drop the user_role_type table if it exists
+        $this->forge->dropTable('UserRoleType', true);
     }
 }

@@ -38,15 +38,16 @@ class CreateCurrencyTable extends Migration
                 'constraint' => ['active', 'inactive'],
                 'default'    => 'active',
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         // Primary key
         $this->forge->addPrimaryKey('CurrencyID');
 
         // Create the table
         $this->forge->createTable('Currencies');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

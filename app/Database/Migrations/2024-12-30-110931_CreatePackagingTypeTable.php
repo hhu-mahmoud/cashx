@@ -25,15 +25,16 @@ class CreatePackagingTypeTable extends Migration
                 'type'           => 'TEXT',
                 'null'           => true,
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         // Add primary key
         $this->forge->addPrimaryKey('PackagingTypeID');
 
         // Create the table
         $this->forge->createTable('PackagingType');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

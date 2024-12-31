@@ -10,6 +10,7 @@ class StorageSeeder extends Seeder
     {
         $storageType = $this->db->table('StorageType')->get()->getResult();
         $storageLocation = $this->db->table('StorageLocation')->get()->getResult();
+        $currencies = $this->db->table('Currencies')->get()->getResult();
         // Sample data for Storage table
         $data = [
             [
@@ -19,6 +20,7 @@ class StorageSeeder extends Seeder
                 'Capacity'         => 1000,
                 'OccupiedSpace'    => 400,
                 'StorageCost'      => 500.00,  // Added StorageCost
+                'CurrencyID' => $currencies[2]->CurrencyID,  // Currency
             ],
             [
                 'StorageName'      => 'Cold Storage Area',
@@ -27,6 +29,7 @@ class StorageSeeder extends Seeder
                 'Capacity'         => 500,
                 'OccupiedSpace'    => 200,
                 'StorageCost'      => 300.00,  // Added StorageCost
+                'CurrencyID' => $currencies[2]->CurrencyID,  // Currency
             ],
             [
                 'StorageName'      => 'Shelf 1',
@@ -35,6 +38,7 @@ class StorageSeeder extends Seeder
                 'Capacity'         => 200,
                 'OccupiedSpace'    => 50,
                 'StorageCost'      => 150.00,  // Added StorageCost
+                'CurrencyID' => $currencies[2]->CurrencyID,  // Currency
             ],
         ];
 

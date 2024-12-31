@@ -18,32 +18,24 @@ class InventorySeeder extends Seeder
                 'MaterialID'    => $rawMaterials[0]->MaterialID,  // Foreign key referencing RawMaterial
                 'StorageID'    => $storage[0]->StorageID,  // Foreign key referencing StorageLocation
                 'Quantity'     => 100,
-                'CreatedAt'    => date('Y-m-d H:i:s'),
-                'UpdatedAt'    => date('Y-m-d H:i:s'),
             ],
             [
                 'ProductID'    => $products[1]->ProductID,
                 'MaterialID'    => $rawMaterials[0]->MaterialID,  // Foreign key referencing RawMaterial
                 'StorageID'    => $storage[0]->StorageID,
                 'Quantity'     => 200,
-                'CreatedAt'    => date('Y-m-d H:i:s'),
-                'UpdatedAt'    => date('Y-m-d H:i:s'),
             ],
             [
                 'ProductID'    => $products[2]->ProductID,
                 'MaterialID'    => $rawMaterials[0]->MaterialID,  // Foreign key referencing RawMaterial
                 'StorageID'    => $storage[0]->StorageID,
                 'Quantity'     => 150,
-                'CreatedAt'    => date('Y-m-d H:i:s'),
-                'UpdatedAt'    => date('Y-m-d H:i:s'),
             ],
             [
                 'ProductID'    => $products[3]->ProductID,
                 'MaterialID'    => $rawMaterials[0]->MaterialID,  // Foreign key referencing RawMaterial
                 'StorageID'    => $storage[0]->StorageID,
                 'Quantity'     => 50,
-                'CreatedAt'    => date('Y-m-d H:i:s'),
-                'UpdatedAt'    => date('Y-m-d H:i:s'),
             ],
         ];
 

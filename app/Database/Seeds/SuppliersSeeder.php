@@ -17,8 +17,6 @@ class SuppliersSeeder extends Seeder
                 'PhoneNumber'   => '123-456-7890',
                 'Email'         => 'contact@abcpkg.com',
                 'Address'       => '123 Packaging St., City, Country',
-                'CreatedAt'     => date('Y-m-d H:i:s'),
-                'UpdatedAt'     => date('Y-m-d H:i:s'),
             ],
         ];
 

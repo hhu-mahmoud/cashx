@@ -13,32 +13,22 @@ class ShippingMethodsSeeder extends Seeder
             [
                 'MethodName'  => 'Air',
                 'Description' => 'Fast shipping via air transport.',
-                'CreatedAt'   => date('Y-m-d H:i:s'),
-                'UpdatedAt'   => date('Y-m-d H:i:s'),
             ],
             [
                 'MethodName'  => 'Sea',
                 'Description' => 'Affordable shipping via sea transport.',
-                'CreatedAt'   => date('Y-m-d H:i:s'),
-                'UpdatedAt'   => date('Y-m-d H:i:s'),
             ],
             [
                 'MethodName'  => 'Land',
                 'Description' => 'Shipping via land transportation.',
-                'CreatedAt'   => date('Y-m-d H:i:s'),
-                'UpdatedAt'   => date('Y-m-d H:i:s'),
             ],
             [
                 'MethodName'  => 'Express',
                 'Description' => 'Priority fast shipping service.',
-                'CreatedAt'   => date('Y-m-d H:i:s'),
-                'UpdatedAt'   => date('Y-m-d H:i:s'),
             ],
             [
                 'MethodName'  => 'Courier',
                 'Description' => 'Standard courier delivery.',
-                'CreatedAt'   => date('Y-m-d H:i:s'),
-                'UpdatedAt'   => date('Y-m-d H:i:s'),
             ],
         ];
 

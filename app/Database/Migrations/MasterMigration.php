@@ -8,9 +8,11 @@ class MasterMigration extends Migration
 {
     public function up()
     {
+
         // Call individual migrations
         $this->call('ApiKeys');
         $this->call('Users');
+        $this->call('Categories');
         $this->call('Currency');
         $this->call('UnitTypes');
         $this->call('Suppliers');
@@ -18,7 +20,6 @@ class MasterMigration extends Migration
         $this->call('StorageLocation');
         $this->call('Notes');
         $this->call('ShippingMethods');
-        $this->call('Categories');
         $this->call('PackagingType');
         $this->call('Operations');
         $this->call('Maintenance');
@@ -33,6 +34,7 @@ class MasterMigration extends Migration
         $this->call('Inventory');
         $this->call('ProductComponents');
         $this->call('Storage');
+
     }
 
     public function down()

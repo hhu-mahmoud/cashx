@@ -31,14 +31,14 @@ class CreateMaintenanceTable extends Migration
             'MaintenanceDate' => [
                 'type' => 'DATETIME',
             ],
-            'created_at datetime default current_timestamp',
-            'updated_at datetime default current_timestamp on update current_timestamp',
+            'CreatedAt datetime default current_timestamp',
+            'UpdatedAt datetime default current_timestamp on update current_timestamp',
         ]);
-
+        $this->db->disableForeignKeyChecks();
         $this->forge->addKey('MaintenanceID', true);
         $this->forge->addForeignKey('CurrencyID', 'Currencies', 'CurrencyID', 'CASCADE', 'CASCADE');
-
         $this->forge->createTable('Maintenance');
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()

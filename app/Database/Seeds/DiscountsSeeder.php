@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class DiscountSeeder extends Seeder
+class DiscountsSeeder extends Seeder
 {
     public function run()
     {
@@ -29,6 +29,6 @@ class DiscountSeeder extends Seeder
         ];
 
         // Insert the data into the Discount table
-        $this->db->table('Discount')->insertBatch($data);
+        $this->db->table('Discounts')->insertBatch($data);
     }
 }

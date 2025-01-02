@@ -12,7 +12,7 @@ class ApiKeyFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Get the API key from the request header
-        $apiKey = $request->getHeaderLine('apikey');
+        $apiKey = $request->getHeaderLine('ApiKey');
 //        if (empty($apiKey)) {
 //            // check the session
 //            if (!session()->has('user_id')) {
@@ -40,7 +40,7 @@ class ApiKeyFilter implements FilterInterface
         }
 
         // Check if the API key is active
-        if ($key['status'] == 0) {
+        if ($key['Status'] == 0) {
             return service('response')
                 ->setStatusCode(403)
                 ->setJSON(['status'  => 'error',
@@ -49,7 +49,7 @@ class ApiKeyFilter implements FilterInterface
         }
 
         // Check expiration
-        if (!empty($key['expires_at']) && strtotime($key['expires_at']) < time()) {
+        if (!empty($key['ExpiresAt']) && strtotime($key['ExpiresAt']) < time()) {
             return service('response')
                 ->setStatusCode(401)
                 ->setJSON(['status'  => 'error',
@@ -58,8 +58,8 @@ class ApiKeyFilter implements FilterInterface
         }
 
         // Check allowed IPs
-        if (!empty($key['allowed_ips'])) {
-            $allowedIps = explode(',', $key['allowed_ips']);
+        if (!empty($key['AllowedIPs'])) {
+            $allowedIps = explode(',', $key['AllowedIPs']);
             if (!in_array($request->getIPAddress(), $allowedIps)) {
                 return service('response')
                     ->setStatusCode(403)
@@ -70,8 +70,8 @@ class ApiKeyFilter implements FilterInterface
         }
 
         // Check allowed models
-        if (!empty($key['allowed_models'])) {
-            $allowedModels = explode(',', $key['allowed_models']);
+        if (!empty($key['AllowedModels'])) {
+            $allowedModels = explode(',', $key['AllowedModels']);
             $currentModel = $arguments['model'] ?? null;
 
             if ($currentModel && !in_array($currentModel, $allowedModels)) {
@@ -84,8 +84,8 @@ class ApiKeyFilter implements FilterInterface
         }
 
         // Check allowed methods
-        if (!empty($key['allowed_methods'])) {
-            $allowedMethods = explode(',', $key['allowed_methods']);
+        if (!empty($key['AllowedMethods'])) {
+            $allowedMethods = explode(',', $key['AllowedMethods']);
             $currentMethod = strtoupper($request->getMethod());
 
             if (!in_array($currentMethod, $allowedMethods)) {

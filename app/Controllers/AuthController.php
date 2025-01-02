@@ -10,7 +10,7 @@ class AuthController extends BaseController
 {
     public function __construct()
     {
-        helper(['cookie']);
+        helper(['cookie','app']);
 
         // Check if "Remember Me" cookie exists
         $rememberMe = get_cookie('remember_me');
@@ -20,8 +20,10 @@ class AuthController extends BaseController
             $data = json_decode($ciphertext, true);
             if ($data) {
                 session()->set([
-                    'user_id'    => $data['UserID'],
-                    'username'   => $data['Username'],
+                    'user_id'    => $data['user_id'],
+                    'username'   => $data['username'],
+                    'user_role_id'   => $data['user_role_id'],
+                    'user_role'   => $data['user_role'],
                     'lang'=> $data['lang'],
                     'isLoggedIn' => true
                 ]);
@@ -155,17 +157,20 @@ class AuthController extends BaseController
                 return view('auth/login', ['validation' => $this->validator]);
             }
 
-            $model = new UserModel();
-            $user = $model->where('Email', $this->request->getVar('email'))->first();
+            $user_model = new UserModel();
+            $user = $user_model->where('Email', $this->request->getVar('email'))->first();
 
             if ($user) {
 
                 if (password_verify($this->request->getVar('password'), $user['Password_hash'])) {
+                    $user_role = $user_model->getUserRoleType($user['UserRoleTypeID']);
                     session()->set([
                         'user_id'    => $user['UserID'],
                         'username'   => $user['Username'],
                         'firstname'   => $user['Firstname'],
                         'lastname'   => $user['Lastname'],
+                        'user_role_id'   => $user['UserRoleTypeID'],
+                        'user_role'   => $user_role['RoleName'] ,
                         'isLoggedIn' => true
                     ]);
 
@@ -179,6 +184,8 @@ class AuthController extends BaseController
                             'username' => $user['Username'],
                             'firstname'   => $user['Firstname'],
                             'lastname'   => $user['Lastname'],
+                            'user_role_id'   => $user['UserRoleTypeID'],
+                            'user_role'   => $user_role['RoleName'] ,
                             'lang' => session()->get('lang') ?? config('App')->defaultLocale,
                         ]);
                         $encrypter = service('encrypter');
@@ -204,5 +211,10 @@ class AuthController extends BaseController
         session()->destroy();
         delete_cookie('remember_me');
         return redirect()->to(site_url());
+    }
+
+    public function noAccess()
+    {
+        return view(caller());
     }
 }

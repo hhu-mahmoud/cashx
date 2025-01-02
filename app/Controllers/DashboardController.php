@@ -33,6 +33,10 @@ class DashboardController extends BaseController
         if (!session()->get('isLoggedIn')) {
             return redirect()->to(site_url());
         }
+        $user_role_id = (int) session()->get('user_role_id');
+        if ($user_role_id > 2) {
+            return redirect()->to("noAccess");
+        }
         return view(caller());
     }
 

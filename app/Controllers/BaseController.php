@@ -21,6 +21,31 @@ use Psr\Log\LoggerInterface;
  */
 abstract class BaseController extends Controller
 {
+    // Constructor to load session helper
+    public function __construct()
+    {
+        helper('session');
+    }
+
+    // Method to check if the user is logged in
+    protected function checkLoggedIn()
+    {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to(site_url())->with('error', 'Please log in first.');
+        }
+    }
+
+    // Method to check if the user has the necessary role
+    protected function checkRole(array $roleRequired = [
+        1,
+        2
+    ])
+    {
+        if (!session()->has('user_role_id') || !in_array(session('user_role_id'), $roleRequired)) {
+            return redirect()->to('no-access');
+        }
+    }
+
     /**
      * Instance of the main Request object.
      *
@@ -60,10 +85,10 @@ abstract class BaseController extends Controller
 
     public function before(RequestInterface $request, $arguments = null)
     {
-        $session = session();
-        if (!$session->get('isLoggedIn')) {
-            return redirect()->to(site_url())->with('error', 'Please log in first.');
-        }
+    }
+
+    public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
+    {
     }
 
 }

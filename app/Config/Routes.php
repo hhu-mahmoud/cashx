@@ -15,6 +15,7 @@ $routes->group('/', ['namespace' => 'App\Controllers'], function($routes) {
     $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->get('profile', 'DashboardController::profile');
     $routes->post('update-profile', 'ProfileController::updateProfile');
+    $routes->get('noAccess', 'AuthController::noAccess');
 });
 
 $routes->group('api', ['namespace' => 'App\Controllers\APIs'], ['filter' => 'apikey'], function($routes) {
@@ -31,6 +32,14 @@ $routes->group('switch-language', ['namespace' => 'App\Controllers'], function($
     $routes->get('(:segment)', 'LanguageController::switchLanguage/$1');
 });
 
+$routes->group('categories', ['namespace' => 'App\Controllers'], ['filter' => 'login'], function($routes) {
+    $routes->get('/', 'CategoryController::index');
+    $routes->get('create', 'CategoryController::create');
+    $routes->post('create', 'CategoryController::create');
+    $routes->get('edit/(:num)', 'CategoryController::edit/$1');
+    $routes->post('edit/(:num)', 'CategoryController::edit/$1');
+    $routes->get('delete/(:num)', 'CategoryController::delete/$1');
+});
 
 
 $routes->get('/policy', 'Home::policy');

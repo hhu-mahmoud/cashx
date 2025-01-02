@@ -4,6 +4,7 @@ namespace Config;
 
 use App\Filters\SameOriginFilter;
 use App\Filters\ApiKeyFilter;
+use App\Filters\LoginFilter;
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -38,6 +39,7 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'apikey'        => ApiKeyFilter::class, // Register the API Key filter
+        'login'        => LoginFilter::class, // Register the Auth filter
     ];
 
     /**
@@ -82,6 +84,7 @@ class Filters extends BaseFilters
             'csrf',
             // 'invalidchars',
             'sameOrigin',
+            'login' => ['except' => ['login']],
         ],
         'after'  => [
             // 'honeypot',

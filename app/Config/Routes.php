@@ -68,6 +68,15 @@ $routes->group('notes', ['namespace' => 'App\Controllers'], ['filter' => 'login'
     $routes->get('delete/(:num)', 'NoteController::delete/$1');
 });
 
+$routes->group('packagingtype', ['namespace' => 'App\Controllers'], ['filter' => 'login'], function($routes) {
+    $routes->get('/', 'PackagingTypeController::index');
+    $routes->get('create', 'PackagingTypeController::create');
+    $routes->post('create', 'PackagingTypeController::create');
+    $routes->get('edit/(:num)', 'PackagingTypeController::edit/$1');
+    $routes->post('edit/(:num)', 'PackagingTypeController::edit/$1');
+    $routes->get('delete/(:num)', 'PackagingTypeController::delete/$1');
+});
+
 $routes->get('/policy', 'Home::policy');
 $routes->get('/imprint', 'Home::imprint');
 $routes->get('/termsOfConditions', 'Home::termsOfConditions');

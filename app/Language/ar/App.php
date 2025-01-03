@@ -2,6 +2,7 @@
 
 return [
     'appName'       => 'كاش إكس',
+    'name'          => 'الاسم',
     'copyright'     => ' جميع الحقوق محفوظة &copy; {0}',
     'dashboard'     => 'لوحة التحكم',
     'profile'       => 'الملف الشخصي',

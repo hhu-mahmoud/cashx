@@ -27,6 +27,26 @@
                     </li>
                     <li class="nav-item">
                         <button class="nav-link btn btn-toggle align-items-center rounded"
+                                data-bs-toggle="collapse" data-bs-target="#packaging-collapse" aria-expanded="true">
+                            <span><i class="fas fa-box"></i> <?= lang('Packaging.packaging') ?>  <i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="collapse show" id="packaging-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal  small">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('packaging'); ?>" class="nav-link">
+                                        <span><i class="fas fa-box-open"></i> <?= lang('Packaging.packagingManagement') ?></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('packagingtype'); ?>" class="nav-link">
+                                        <span><i class="fas fa-tags"></i> <?= lang('Packaging.packagingTypeManagement') ?></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn btn-toggle align-items-center rounded"
                                 data-bs-toggle="collapse" data-bs-target="#suppliers-collapse" aria-expanded="true">
                             <span><i class="fas fa-handshake"></i> <?= lang('Suppliers.suppliers') ?>  <i class="fa-solid fa-chevron-down"></i></span>
                         </button>

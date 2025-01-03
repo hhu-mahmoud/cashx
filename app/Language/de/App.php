@@ -2,6 +2,7 @@
 
 return [
     'appName'       => 'CashX',
+    'name'          => 'Name',
     'copyright'     => 'Urheberrecht &copy; {0}',
     'dashboard'     => 'Dashboard',
     'profile'       => 'Profil',

@@ -7,7 +7,7 @@
         <table class="table table-striped table-hover table-sm">
             <thead class="table-dark">
             <tr>
-                <th scope="col" class="col-md-1">#</th>
+                <th scope="col" class="col-md-1 text-center">#</th>
                 <th scope="col" class="col-md-3"><?= lang('Categories.categoryName') ?></th>
                 <th scope="col" class="col-md-6"><?= lang('Categories.description') ?></th>
                 <?php if (session('user_role_id') <= 2): ?>
@@ -19,7 +19,7 @@
             <tbody>
             <?php foreach ($categories as $index => $category): ?>
                 <tr>
-                    <th scope="row"><?= $index + 1; ?></th>
+                    <th scope="row" class="text-center"><?= $index + 1; ?></th>
                     <td><?= $category['CategoryName']; ?></td>
                     <td><?= $category['Description']; ?></td>
                     <?php if (session('user_role_id') <= 2): ?>

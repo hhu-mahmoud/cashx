@@ -108,3 +108,7 @@ body {
     color: #fff;
     text-decoration: none;
 }
+
+.table-responsive-md tbody {
+    vertical-align: baseline;
+}

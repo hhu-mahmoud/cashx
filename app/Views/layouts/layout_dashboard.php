@@ -10,45 +10,35 @@
                         <a href="<?= base_url('dashboard'); ?>" class="nav-link"><i
                                     class="fas fa-tachometer-alt me-2"></i><span><?= lang('App.dashboard') ?></span></a>
                     </li>
-                </ul>
-
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span><i class="fas fa-layer-group"></i> <?= lang('Categories.categoryManagement') ?></span>
-                    <?php if (session('user_role_id') <= 2): ?>
-                        <a class="link-secondary" href="<?= base_url('categories/create'); ?>"
-                           aria-label="<?= lang('Categories.addNewCategory') ?>">
-                            <span data-feather="plus-circle"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
-                        </a>
-                    <?php endif; ?>
-                </h6>
-                <ul class="nav flex-column mb-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <a href="<?= base_url('categories'); ?>" class="nav-link"><i
-                                        class="fas fa-list"></i><span><?= lang('Categories.categoriesList') ?></span></a>
-
-                        </a>
+                        <button class="nav-link btn btn-toggle align-items-center rounded"
+                                data-bs-toggle="collapse" data-bs-target="#categories-collapse" aria-expanded="true">
+                            <span><i class="fas fa-cog"></i> <?= lang('Categories.categoryManagement') ?></span>
+                        </button>
+                        <div class="collapse show" id="categories-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal  small">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('categories'); ?>" class="nav-link">
+                                        <span><i class="fas fa-list"></i> <?= lang('Categories.categoriesList') ?></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                </ul>
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span><i class="fas fa-cog"></i> <?= lang('App.settings') ?></span>
-                </h6>
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span><i class="fas fa-layer-group"></i> <?= lang('Currencies.currencyManagement') ?></span>
-                    <?php if (session('user_role_id') <= 2): ?>
-                        <a class="link-secondary" href="<?= base_url('currencies/create'); ?>"
-                           aria-label="<?= lang('Currencies.addNewCurrency') ?>">
-                            <span data-feather="plus-circle"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
-                        </a>
-                    <?php endif; ?>
-                </h6>
-                <ul class="nav flex-column mb-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <a href="<?= base_url('currencies'); ?>" class="nav-link"><i
-                                        class="fas fa-list"></i><span><?= lang('Currencies.currenciesList') ?></span></a>
-
-                        </a>
+                        <button class="nav-link btn btn-toggle align-items-center rounded"
+                                data-bs-toggle="collapse" data-bs-target="#settings-collapse" aria-expanded="true">
+                            <span><i class="fas fa-cog"></i> <?= lang('App.settings') ?></span>
+                        </button>
+                        <div class="collapse show" id="settings-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal  small">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('currencies'); ?>" class="nav-link">
+                                        <span><i class="fas fa-layer-group"></i> <?= lang('Currencies.currencyManagement') ?></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>

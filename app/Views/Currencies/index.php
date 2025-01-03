@@ -2,8 +2,13 @@
 <?= $this->section('content') ?>
 <?php $session = session(); ?>
     <h1 class="text-center my-4"><?= lang('Currencies.currencyManagement') ?></h1>
-
-    <div class="table-responsive-md">
+<?php if (session('user_role_id') <= 2): ?>
+    <a class=" btn btn-success btn-sm" href="<?= base_url('categories/create'); ?>"
+       aria-label="<?= lang('Categories.addNewCategory') ?>">
+        <span data-feather="plus-circle"><i class="fa fa-plus-circle" aria-hidden="true"></i> <?= lang('Categories.addNewCategory') ?></span>
+    </a>
+<?php endif; ?>
+    <div class="table-responsive-md mt-2">
         <table class="table table-striped table-hover table-sm">
             <thead class="table-dark">
             <tr>

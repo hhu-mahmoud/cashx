@@ -11,12 +11,13 @@
 
 // Cast language settings
 return [
+    'categories'                  => 'Categories',
+    'category'                    => 'Category',
     'categoryManagement'          => 'Category Management',
     'addNewCategory'              => 'Add New Category',
     'createCategory'              => 'Create Category',
     'editCategory'                => 'Edit Category',
     'categoriesList'              => 'Categories List',
     'categoryName'                => 'Category Name',
-    'description'                 => 'Description',
     'pleaseProvideACategoryName.' => 'Please provide a category name.',
 ];

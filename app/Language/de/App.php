@@ -9,6 +9,7 @@ return [
     'message'       => 'Nachricht',
     'messages'      => 'Nachrichten',
     'notifications' => 'Benachrichtigungen',
+    'description'   => 'Beschreibung',
     'status'        => 'Status',
     'save'          => 'Speichern',
     'add'           => 'Hinzufügen',
@@ -16,4 +17,7 @@ return [
     'delete'        => 'Löschen',
     'remove'        => 'Entfernen',
     'actions'       => 'Aktionen',
+    'phoneNumber' => 'Telefonnummer',
+    'contactInfo' => 'Kontaktinformation',
+    'address'     => 'Adresse',
 ];

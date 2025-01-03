@@ -9,6 +9,7 @@ return [
     'message'       => 'Message',
     'messages'      => 'Messages',
     'notifications' => 'Notifications',
+    'description'   => 'Description',
     'status'        => 'Status',
     'save'          => 'Save',
     'add'           => 'Add',
@@ -16,4 +17,7 @@ return [
     'delete'        => 'Delete',
     'remove'        => 'Remove',
     'actions'       => 'Actions',
+    'phoneNumber' => 'Phone Number',
+    'contactInfo' => 'Contact Info',
+    'address'     => 'Address',
 ];

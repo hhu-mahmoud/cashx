@@ -13,11 +13,11 @@
     </div>
     <div class="mb-3">
         <label for="CurrencySymbol" class="form-label"><?=lang('Currencies.currencySymbol')?></label>
-        <input type="text" class="form-control" name="CurrencySymbol" id="CurrencySymbol" value="<?= $currencies['CurrencySymbol']; ?>" required>
+        <input type="text" class="form-control" name="CurrencySymbol" id="CurrencySymbol" value="<?= $currencies['CurrencySymbol']; ?>">
     </div>
     <div class="mb-3">
         <label for="ExchangeRate" class="form-label"><?=lang('Currencies.exchangeRate')?></label>
-        <input type="text" class="form-control" name="ExchangeRate" id="ExchangeRate" value="<?= $currencies['ExchangeRate']; ?>" required>
+        <input type="text" class="form-control" name="ExchangeRate" id="ExchangeRate" value="<?= $currencies['ExchangeRate']; ?>">
     </div>
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" name="Status" id="Status"  <?= $currencies['Status'] == 'active' ? 'checked' : ''; ?>>

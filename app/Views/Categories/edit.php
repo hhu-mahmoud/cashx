@@ -9,7 +9,7 @@
         <div class="invalid-feedback"><?=lang('Categories.pleaseProvideACategoryName')?></div>
     </div>
     <div class="mb-3">
-        <label for="Description" class="form-label"><?=lang('Categories.description')?></label>
+        <label for="Description" class="form-label"><?=lang('App.description')?></label>
         <textarea class="form-control" name="Description" id="Description" rows="3"><?= $category['Description']; ?></textarea>
     </div>
     <button type="submit" class="btn btn-success">

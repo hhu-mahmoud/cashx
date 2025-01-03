@@ -50,6 +50,15 @@ $routes->group('currencies', ['namespace' => 'App\Controllers'], ['filter' => 'l
     $routes->get('delete/(:num)', 'CurrencyController::delete/$1');
 });
 
+$routes->group('suppliers', ['namespace' => 'App\Controllers'], ['filter' => 'login'], function($routes) {
+    $routes->get('/', 'SupplierController::index');
+    $routes->get('create', 'SupplierController::create');
+    $routes->post('create', 'SupplierController::create');
+    $routes->get('edit/(:num)', 'SupplierController::edit/$1');
+    $routes->post('edit/(:num)', 'SupplierController::edit/$1');
+    $routes->get('delete/(:num)', 'SupplierController::delete/$1');
+});
+
 $routes->get('/policy', 'Home::policy');
 $routes->get('/imprint', 'Home::imprint');
 $routes->get('/termsOfConditions', 'Home::termsOfConditions');

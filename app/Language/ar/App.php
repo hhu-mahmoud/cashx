@@ -9,6 +9,7 @@ return [
     'message'       => 'رسالة',
     'messages'      => 'الرسائل',
     'notifications' => 'الإشعارات',
+    'description'   => 'الوصف',
     'status'        => 'الحالة',
     'save'          => 'حفظ',
     'add'           => 'إضافة',
@@ -17,4 +18,7 @@ return [
     'delete'        => 'حذف',
     'remove'        => 'إزالة',
     'actions'       => 'الإجراءات',
+    'phoneNumber'       => 'رقم الهاتف',
+    'contactInfo'       => 'معلومات الاتصال',
+    'address'       => 'العنوان',
 ];

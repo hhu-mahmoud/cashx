@@ -13,13 +13,28 @@
                     <li class="nav-item">
                         <button class="nav-link btn btn-toggle align-items-center rounded"
                                 data-bs-toggle="collapse" data-bs-target="#categories-collapse" aria-expanded="true">
-                            <span><i class="fas fa-cog"></i> <?= lang('Categories.categoryManagement') ?></span>
+                            <span><i class="fas fa-cube"></i> <?= lang('Categories.categories') ?></span>
                         </button>
                         <div class="collapse show" id="categories-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal  small">
                                 <li class="nav-item">
                                     <a href="<?= base_url('categories'); ?>" class="nav-link">
-                                        <span><i class="fas fa-list"></i> <?= lang('Categories.categoriesList') ?></span>
+                                        <span><i class="fas fa-layer-group"></i> <?= lang('Categories.categoryManagement') ?></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn btn-toggle align-items-center rounded"
+                                data-bs-toggle="collapse" data-bs-target="#suppliers-collapse" aria-expanded="true">
+                            <span><i class="fas fa-handshake"></i> <?= lang('Suppliers.suppliers') ?></span>
+                        </button>
+                        <div class="collapse show" id="suppliers-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal  small">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('suppliers'); ?>" class="nav-link">
+                                        <span><i class="fas fa-layer-group"></i> <?= lang('Suppliers.suppliersManagement') ?></span>
                                     </a>
                                 </li>
                             </ul>

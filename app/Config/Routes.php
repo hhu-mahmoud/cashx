@@ -41,6 +41,14 @@ $routes->group('categories', ['namespace' => 'App\Controllers'], ['filter' => 'l
     $routes->get('delete/(:num)', 'CategoryController::delete/$1');
 });
 
+$routes->group('currencies', ['namespace' => 'App\Controllers'], ['filter' => 'login'], function($routes) {
+    $routes->get('/', 'CurrencyController::index');
+    $routes->get('create', 'CurrencyController::create');
+    $routes->post('create', 'CurrencyController::create');
+    $routes->get('edit/(:num)', 'CurrencyController::edit/$1');
+    $routes->post('edit/(:num)', 'CurrencyController::edit/$1');
+    $routes->get('delete/(:num)', 'CurrencyController::delete/$1');
+});
 
 $routes->get('/policy', 'Home::policy');
 $routes->get('/imprint', 'Home::imprint');

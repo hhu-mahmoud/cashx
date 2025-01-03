@@ -30,7 +30,7 @@ class CreateCurrencyTable extends Migration
             ],
             'ExchangeRate' => [
                 'type'       => 'DECIMAL',
-                'constraint' => '10,4', // e.g., 1.2345
+                'constraint' => '10,6', // e.g., 1.2345
                 'default'    => 1.0000,  // Default to 1.0000 for base currency
             ],
             'Status' => [

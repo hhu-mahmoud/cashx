@@ -11,14 +11,13 @@
 
 // Cast language settings
 return [
-    'categoryManagement' => 'إدارة الفئات',
-    'addNewCategory'       => 'إضافة فئة جديدة',
-    'createCategory'       => 'إنشاء فئة',
-    'editCategory'       => 'تعديل الفئة',
-    'categoriesList'       => 'قائمة الفئات',
-    'categoryName'       => 'اسم الفئة',
-    'description'        => 'الوصف',
-    'actions'            => 'الإجراءات',
-    'pleaseProvideACategoryName.'      => 'يرجى تقديم اسم الفئة.',
+    'categoryManagement'          => 'إدارة الفئات',
+    'addNewCategory'              => 'إضافة فئة جديدة',
+    'createCategory'              => 'إنشاء فئة',
+    'editCategory'                => 'تعديل الفئة',
+    'categoriesList'              => 'قائمة الفئات',
+    'categoryName'                => 'اسم الفئة',
+    'description'                 => 'الوصف',
+    'pleaseProvideACategoryName.' => 'يرجى تقديم اسم الفئة.',
 ];
 

@@ -30,6 +30,27 @@
                         </a>
                     </li>
                 </ul>
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span><i class="fas fa-cog"></i> <?= lang('App.settings') ?></span>
+                </h6>
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span><i class="fas fa-layer-group"></i> <?= lang('Currencies.currencyManagement') ?></span>
+                    <?php if (session('user_role_id') <= 2): ?>
+                        <a class="link-secondary" href="<?= base_url('currencies/create'); ?>"
+                           aria-label="<?= lang('Currencies.addNewCurrency') ?>">
+                            <span data-feather="plus-circle"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </a>
+                    <?php endif; ?>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <a href="<?= base_url('currencies'); ?>" class="nav-link"><i
+                                        class="fas fa-list"></i><span><?= lang('Currencies.currenciesList') ?></span></a>
+
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </section>

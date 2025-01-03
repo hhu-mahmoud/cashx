@@ -59,6 +59,15 @@ $routes->group('suppliers', ['namespace' => 'App\Controllers'], ['filter' => 'lo
     $routes->get('delete/(:num)', 'SupplierController::delete/$1');
 });
 
+$routes->group('notes', ['namespace' => 'App\Controllers'], ['filter' => 'login'], function($routes) {
+    $routes->get('/', 'NoteController::index');
+    $routes->get('create', 'NoteController::create');
+    $routes->post('create', 'NoteController::create');
+    $routes->get('edit/(:num)', 'NoteController::edit/$1');
+    $routes->post('edit/(:num)', 'NoteController::edit/$1');
+    $routes->get('delete/(:num)', 'NoteController::delete/$1');
+});
+
 $routes->get('/policy', 'Home::policy');
 $routes->get('/imprint', 'Home::imprint');
 $routes->get('/termsOfConditions', 'Home::termsOfConditions');

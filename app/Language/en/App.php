@@ -17,7 +17,8 @@ return [
     'delete'        => 'Delete',
     'remove'        => 'Remove',
     'actions'       => 'Actions',
-    'phoneNumber' => 'Phone Number',
-    'contactInfo' => 'Contact Info',
-    'address'     => 'Address',
+    'phoneNumber'   => 'Phone Number',
+    'contactInfo'   => 'Contact Info',
+    'address'       => 'Address',
+    'relatedTo'     => 'Related To',
 ];

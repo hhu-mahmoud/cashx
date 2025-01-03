@@ -55,6 +55,10 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url('notes'); ?>" class="nav-link"><i
+                                    class="fas fa-sticky-note me-2"></i><span><?= lang('Notes.notes') ?></span></a>
+                    </li>
                 </ul>
             </div>
         </nav>

@@ -18,7 +18,8 @@ return [
     'delete'        => 'حذف',
     'remove'        => 'إزالة',
     'actions'       => 'الإجراءات',
-    'phoneNumber'       => 'رقم الهاتف',
-    'contactInfo'       => 'معلومات الاتصال',
+    'phoneNumber'   => 'رقم الهاتف',
+    'contactInfo'   => 'معلومات الاتصال',
     'address'       => 'العنوان',
+    'relatedTo'     => 'متعلق بـ',
 ];

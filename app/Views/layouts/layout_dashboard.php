@@ -13,7 +13,7 @@
                     <li class="nav-item">
                         <button class="nav-link btn btn-toggle align-items-center rounded"
                                 data-bs-toggle="collapse" data-bs-target="#categories-collapse" aria-expanded="true">
-                            <span><i class="fas fa-cube"></i> <?= lang('Categories.categories') ?></span>
+                            <span><i class="fas fa-cube"></i> <?= lang('Categories.categories') ?>  <i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="collapse show" id="categories-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal  small">
@@ -28,7 +28,7 @@
                     <li class="nav-item">
                         <button class="nav-link btn btn-toggle align-items-center rounded"
                                 data-bs-toggle="collapse" data-bs-target="#suppliers-collapse" aria-expanded="true">
-                            <span><i class="fas fa-handshake"></i> <?= lang('Suppliers.suppliers') ?></span>
+                            <span><i class="fas fa-handshake"></i> <?= lang('Suppliers.suppliers') ?>  <i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="collapse show" id="suppliers-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal  small">
@@ -43,7 +43,7 @@
                     <li class="nav-item">
                         <button class="nav-link btn btn-toggle align-items-center rounded"
                                 data-bs-toggle="collapse" data-bs-target="#settings-collapse" aria-expanded="true">
-                            <span><i class="fas fa-cog"></i> <?= lang('App.settings') ?></span>
+                            <span><i class="fas fa-cog"></i> <?= lang('App.settings') ?>  <i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="collapse show" id="settings-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal  small">
